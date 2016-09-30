@@ -1,0 +1,23 @@
+<project default="all">
+    <property name="build.classes" value="build/classes"/>
+    <property name="build.aar" value="build/aar"/>
+    <property name="resources" value="src/main/resources"/>
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="${build.classes}"/>
+        <javac includeantruntime="false" srcdir="src" destdir="${build.classes}"/>
+    </target>
+
+    <target name="aar">
+        <mkdir dir="${build.aar}"/>
+        <jar destfile="${build.aar}/Soap-Service.aar" basedir="${build.classes}">
+            <metainf dir="${resources}/META-INF" includes="**/services.xml"/>
+        </jar>
+    </target>
+
+    <target name="all" depends="clean,compile,aar"/>
+</project>

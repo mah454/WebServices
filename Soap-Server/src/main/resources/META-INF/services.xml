@@ -1,0 +1,27 @@
+<serviceGroup>
+    <service name="Person-Service">
+        <description>
+            This is simple service for send your own person information
+        </description>
+        <operation name="getName">
+            <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+        </operation>
+        <operation name="getFamily">
+            <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+        </operation>
+        <parameter name="ServiceClass">ir.moke.webservice.soap.PersonService</parameter>
+    </service>
+
+    <service name="Calculator-Service">
+        <description>
+            This is simple calculator service
+        </description>
+        <operation name="sum">
+            <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+        </operation>
+        <operation name="minus">
+            <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+        </operation>
+        <parameter name="ServiceClass">ir.moke.webservice.soap.CalculatorService</parameter>
+    </service>
+</serviceGroup>

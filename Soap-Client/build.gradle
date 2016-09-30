@@ -1,0 +1,19 @@
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'org.apache.axis2:axis2-transport-http:1.7.3'
+    compile 'org.apache.axis2:axis2-adb:1.7.3'
+    compile 'org.apache.axis2:axis2-transport-local:1.7.3'
+}

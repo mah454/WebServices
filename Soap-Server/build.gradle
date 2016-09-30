@@ -1,0 +1,17 @@
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.apache.axis2:axis2-kernel:1.7.2'
+    compile 'org.apache.axis2:axis2-adb:1.7.2'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
